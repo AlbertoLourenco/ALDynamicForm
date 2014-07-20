@@ -1,7 +1,5 @@
-
-=======================
   ALDynamicForm - iOS
-=======================
+---------------
 
 ![ALDynamicForm v1.0](http://albertolourenco.com.br/github.png)
 
