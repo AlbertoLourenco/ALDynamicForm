@@ -37,7 +37,7 @@ Create something objects, add in array and generate your dynamic custom form.
     self.form = [[ALDynamicForm alloc] initWithFrame:self.formFrame andElements:[self createFormElements] onView:self.view];
 
 
-#Creating element:
+#Creating elements:
 
     ----------------------------------------------------------------------------------------
     UIViewController.m - createFormElements()
