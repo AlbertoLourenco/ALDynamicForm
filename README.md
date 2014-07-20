@@ -17,7 +17,5 @@ Create something objects, add in array and generate your dynamic custom form.
 
 See the object attributes on example project.
 
-/*
 *   NOTE 01: create the FORM var on interface (YOUR_CLASS.h). If you don't create the app will crash when keyboard appears.
 *   NOTE 02: add the NSNotificationCenter Observer to get the form values when submited
-*/
