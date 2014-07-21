@@ -74,6 +74,19 @@ static UITextView* activeTextView = nil;
     [self.view setBackgroundColor:nil];
 }
 
+- (void)removeFromSuperView{
+    elements = nil;
+    superView = nil;
+    formFrame = CGRectZero;
+    elementTag = 1;
+    lastOriginY = 0.0f;
+    formRowHeight = 0.0f;
+    formScrolContentInsetHeight = 0.0f;
+    keyboardHeight = 0.0f;
+    isTextView = NO;
+    activeTextView = nil;
+}
+
 - (UIView*)generateForm:(NSMutableArray*)elementsArray{
     
     elements = [[NSMutableArray alloc] init];
@@ -146,13 +159,13 @@ static UITextView* activeTextView = nil;
 
 - (void)addInput:(FormInput*)object toView:(UIScrollView*)scrollView{
     
-    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY, object.width, object.height)];
+    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY + object.marginTop, object.width, object.height)];
     [background setImage:object.backgroundImage];
     [background setBackgroundColor:object.backgroundColor];
     [background setContentMode:UIViewContentModeScaleAspectFit];
     [background setUserInteractionEnabled:YES];
     
-    float elementPositionX = object.padding / 2;
+    float elementPositionX = (object.padding / 2 + (formFrame.size.width - object.width) / 2) - ALDynamicForm_ElementDefaultPadding / 2;
     
     if (!object.borderStyle && !object.backgroundImage && !object.backgroundColor) {
         object.borderStyle = UITextBorderStyleRoundedRect;
@@ -190,7 +203,7 @@ static UITextView* activeTextView = nil;
     [background addSubview:element];
     [background sendSubviewToBack:element];
     
-    lastOriginY += object.height + ALDynamicForm_ElementDefaultMarginTop;
+    lastOriginY += object.marginTop + object.height + object.marginBottom;
     formRowHeight = object.height;
     elementTag++;
     
@@ -203,7 +216,7 @@ static UITextView* activeTextView = nil;
 
 - (void)addTextArea:(FormTextArea*)object toView:(UIScrollView*)scrollView{
     
-    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY, object.width, object.height)];
+    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY + object.marginTop, object.width, object.height)];
     [background setImage:object.backgroundImage];
     [background setBackgroundColor:object.backgroundColor];
     [background setContentMode:UIViewContentModeScaleAspectFit];
@@ -213,7 +226,7 @@ static UITextView* activeTextView = nil;
         object.placeholderText = ALDynamicForm_ElementPlaceholderDefaultValue;
     }
     
-    float elementPositionX = (object.padding / 2) + (ALDynamicForm_ElementDefaultTextViewPadding / 2);
+    float elementPositionX = (object.padding / 2 + (formFrame.size.width - object.width) / 2);
     
     UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(elementPositionX + (ALDynamicForm_ElementDefaultTextViewPadding / 2),
                                                                ALDynamicForm_ElementDefaultTextViewPadding + 2.5f,
@@ -240,7 +253,7 @@ static UITextView* activeTextView = nil;
     [background addSubview:element];
     [background sendSubviewToBack:element];
     
-    lastOriginY += object.height + ALDynamicForm_ElementDefaultMarginTop;
+    lastOriginY += object.marginTop + object.height + object.marginBottom;
     formRowHeight = object.height;
     elementTag++;
     
@@ -253,13 +266,13 @@ static UITextView* activeTextView = nil;
 
 - (void)addSwitch:(FormSwitch*)object toView:(UIScrollView*)scrollView{
     
-    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY, object.width, object.height)];
+    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY + object.marginTop, object.width, object.height)];
     [background setImage:object.backgroundImage];
     [background setBackgroundColor:object.backgroundColor];
     [background setContentMode:UIViewContentModeScaleAspectFit];
     [background setUserInteractionEnabled:YES];
     
-    float elementPositionX = object.padding / 2;
+    float elementPositionX = (object.padding / 2 + (formFrame.size.width - object.width) / 2) - ALDynamicForm_ElementDefaultPadding / 2;
     float labelWidth = (((object.width - object.padding) - 10.f /* Space */) - 51.0f /* iOS 7 - UISwitch default width size */);
     
     if (!object.labelTextValue) {
@@ -277,7 +290,7 @@ static UITextView* activeTextView = nil;
     [element setTag:elementTag];
     [background addSubview:element];
     
-    lastOriginY += object.height + ALDynamicForm_ElementDefaultMarginTop;
+    lastOriginY += object.marginTop + object.height + object.marginBottom;
     formRowHeight = object.height;
     elementTag++;
     
@@ -290,13 +303,13 @@ static UITextView* activeTextView = nil;
 
 - (void)addSlider:(FormSlider*)object toView:(UIScrollView*)scrollView{
     
-    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY, object.width, object.height)];
+    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY + object.marginTop, object.width, object.height)];
     [background setImage:object.backgroundImage];
     [background setBackgroundColor:object.backgroundColor];
     [background setContentMode:object.backgroundContentMode];
     [background setUserInteractionEnabled:YES];
     
-    float elementPositionX = object.padding / 2;
+    float elementPositionX = (object.padding / 2 + (formFrame.size.width - object.width) / 2) - ALDynamicForm_ElementDefaultPadding / 2;
     
     UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(elementPositionX, 0, object.width - object.padding, object.height/2)];
     [label setTextColor:object.labelTextColor];
@@ -326,7 +339,7 @@ static UITextView* activeTextView = nil;
     [element setTag:elementTag];
     [background addSubview:element];
     
-    lastOriginY += object.height + ALDynamicForm_ElementDefaultMarginTop;
+    lastOriginY += object.marginTop + object.height + object.marginBottom;
     formRowHeight = object.height;
     elementTag++;
     
@@ -339,13 +352,13 @@ static UITextView* activeTextView = nil;
 
 - (void)addCombobox:(FormCombobox*)object toView:(UIScrollView*)scrollView{
     
-    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY, object.width, object.height)];
+    UIImageView* background = [[UIImageView alloc] initWithFrame:CGRectMake(0, lastOriginY + object.marginTop, object.width, object.height)];
     [background setImage:object.backgroundImage];
     [background setBackgroundColor:object.backgroundColor];
     [background setContentMode:UIViewContentModeScaleToFill];
     [background setUserInteractionEnabled:YES];
     
-    float elementPositionX = object.padding / 2;
+    float elementPositionX = (object.padding / 2 + (formFrame.size.width - object.width) / 2) - ALDynamicForm_ElementDefaultPadding / 2;
     
     Select* element = [Select buttonWithType:UIButtonTypeCustom];
     [element setFrame:CGRectMake(elementPositionX, 0, object.width - object.padding, object.height)];
@@ -361,7 +374,7 @@ static UITextView* activeTextView = nil;
     [background addSubview:element];
     [background sendSubviewToBack:element];
     
-    lastOriginY += object.height + ALDynamicForm_ElementDefaultMarginTop;
+    lastOriginY += object.marginTop + object.height + object.marginBottom;
     formRowHeight = object.height;
     elementTag++;
     
@@ -374,20 +387,21 @@ static UITextView* activeTextView = nil;
 
 - (void)addSubmit:(FormSubmit*)object toView:(UIScrollView*)scrollView{
     
-    float elementPositionX = object.padding / 2;
+    float elementPositionX = (object.padding / 2 + (formFrame.size.width - object.width) / 2) - ALDynamicForm_ElementDefaultPadding / 2;
     
-    Select* element = [Select buttonWithType:UIButtonTypeCustom];
-    [element setFrame:CGRectMake(elementPositionX, lastOriginY + 5.0f, object.width - object.padding, object.height)];
+    UIButton* element = [UIButton buttonWithType:UIButtonTypeCustom];
+    [element setFrame:CGRectMake(elementPositionX, lastOriginY + object.marginTop, object.width - object.padding, object.height)];
     [element.titleLabel setFont:object.labelTextFont];
     [element setTitle:object.labelTextValue forState:UIControlStateNormal];
     [element setTitleColor:object.labelTextColor forState:UIControlStateNormal];
     [element setBackgroundImage:object.backgroundImage forState:UIControlStateNormal];
+    [element setBackgroundColor:object.backgroundColor];
     [element setContentHorizontalAlignment:object.labelTextAlignment];
     [element setTag:elementTag];
     
     [element addTarget:self action:@selector(getFormValues) forControlEvents:UIControlEventTouchUpInside];
     
-    lastOriginY += object.height + ALDynamicForm_ElementDefaultMarginTop;
+    lastOriginY += object.marginTop + object.height + object.marginBottom;
     formRowHeight = object.height;
     elementTag++;
     
@@ -521,6 +535,7 @@ static UITextView* activeTextView = nil;
     
     keyboardHeight = [[[notification userInfo] valueForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
     showingKeyboard = YES;
+    CGRect centeredRect = CGRectZero;
     
     if (isTextView == NO) {
         
@@ -528,6 +543,11 @@ static UITextView* activeTextView = nil;
                          animations:^{
                              self.scroll.contentSize = CGSizeMake(self.scroll.frame.size.width, formScrolContentInsetHeight + keyboardHeight);
                          }];
+        
+        centeredRect = CGRectMake(0,
+                                  CGRectGetMaxX(activeInput.frame) + activeInput.frame.size.height,
+                                  self.scroll.frame.size.width,
+                                  self.scroll.frame.size.height);
     }else{
         
         [UIView animateWithDuration:.25
@@ -535,12 +555,13 @@ static UITextView* activeTextView = nil;
                              self.scroll.contentSize = CGSizeMake(self.scroll.frame.size.width, formScrolContentInsetHeight + keyboardHeight);
                          }];
         
-        CGRect centeredRect = CGRectMake(0,
-                                         CGRectGetMaxX(activeTextView.frame),
-                                         self.scroll.frame.size.width,
-                                         self.scroll.frame.size.height);
-        [self.scroll scrollRectToVisible:centeredRect animated:YES];
+        centeredRect = CGRectMake(0,
+                                  CGRectGetMaxX(activeTextView.frame) + activeTextView.frame.size.height,
+                                  self.scroll.frame.size.width,
+                                  self.scroll.frame.size.height);
     }
+    
+    [self.scroll scrollRectToVisible:centeredRect animated:YES];
 }
 
 - (void)keyboardWillHide{
@@ -833,7 +854,7 @@ NSMutableString *filteredPhoneStringFromStringWithFilter(NSString *string, NSStr
 
 @implementation RowElement
 
-@synthesize fieldName, height, width, padding, backgroundImage, backgroundColor;
+@synthesize fieldName, height, width, padding, marginTop, marginBottom, backgroundImage, backgroundColor;
 
 - (id)init{
     
@@ -841,6 +862,8 @@ NSMutableString *filteredPhoneStringFromStringWithFilter(NSString *string, NSStr
     height          = ALDynamicForm_ElementDefaultHeight;
     width           = ALDynamicForm_ElementDefaultWidth;
     padding         = ALDynamicForm_ElementDefaultPadding;
+    marginTop       = ALDynamicForm_ElementDefaultMarginTop;
+    marginBottom    = ALDynamicForm_ElementDefaultMarginBottom;
     backgroundImage = nil;
     backgroundColor = nil;
     

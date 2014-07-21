@@ -58,6 +58,8 @@
     element.width                       = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element.height                      = 50.0f;
     element.padding                     = 20.0f;
+    element.marginTop                   = 1.0f;
+    element.marginBottom                = 0.0f;
     element.textColor                   = [UIColor darkGrayColor];
     element.textFont                    = [UIFont fontWithName:@"Arial" size:14.0];
     element.borderStyle                 = UITextBorderStyleNone;
@@ -73,6 +75,8 @@
     element_00.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_00.height                   = 50.0f;
     element_00.padding                  = 20.0f;
+    element_00.marginTop                = 1.0f;
+    element_00.marginBottom             = 0.0f;
     element_00.textColor                = [UIColor darkGrayColor];
     element_00.textFont                 = [UIFont fontWithName:@"Arial" size:14.0];
     element_00.borderStyle              = UITextBorderStyleNone;
@@ -88,6 +92,8 @@
     element_01.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_01.height                   = 50.0f;
     element_01.padding                  = 20.0f;
+    element_01.marginTop                = 1.0f;
+    element_01.marginBottom             = 0.0f;
     element_01.textColor                = [UIColor darkGrayColor];
     element_01.textFont                 = [UIFont fontWithName:@"Arial" size:14.0];
     element_01.borderStyle              = UITextBorderStyleNone;
@@ -100,6 +106,8 @@
     element_02.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_02.height                   = element_01.height;
     element_02.padding                  = element_01.padding;
+    element_02.marginTop                = 10.0f;
+    element_02.marginBottom             = 0.0f;
     element_02.labelTextValue           = @"User active?";
     element_02.labelTextColor           = [UIColor darkGrayColor];
     element_02.labelTextFont            = [UIFont fontWithName:@"Arial" size:14.0];
@@ -111,6 +119,8 @@
     element_03.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_03.height                   = element_01.height;
     element_03.padding                  = element_01.padding;
+    element_03.marginTop                = 10.0f;
+    element_03.marginBottom             = 0.0f;
     element_03.labelTextValue           = @"Relationship";
     element_03.labelTextColor           = [UIColor darkGrayColor];
     element_03.labelTextFont            = [UIFont fontWithName:@"Arial" size:14.0];
@@ -124,6 +134,8 @@
     element_04.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_04.height                   = element_01.height;
     element_04.padding                  = element_01.padding;
+    element_04.marginTop                = 1.0f;
+    element_04.marginBottom             = 0.0f;
     element_04.labelTextValue           = @"Vehicle";
     element_04.labelTextColor           = [UIColor darkGrayColor];
     element_04.labelTextFont            = [UIFont fontWithName:@"Arial" size:14.0];
@@ -137,6 +149,8 @@
     element_05.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_05.height                   = element_01.height;
     element_05.padding                  = element_01.padding;
+    element_05.marginTop                = 1.0f;
+    element_05.marginBottom             = 0.0f;
     element_05.labelTextValue           = @"Blood type";
     element_05.labelTextColor           = [UIColor darkGrayColor];
     element_05.labelTextFont            = [UIFont fontWithName:@"Arial" size:14.0];
@@ -150,6 +164,8 @@
     element_06.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_06.height                   = 70.0f;
     element_06.padding                  = element_01.padding;
+    element_06.marginTop                = 1.0f;
+    element_06.marginBottom             = 0.0f;
     element_06.minimumValue             = 18;
     element_06.maximumValue             = 80;
     element_06.labelTextValue           = @"Age";
@@ -164,6 +180,8 @@
     element_07.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_07.height                   = 120.0f;
     element_07.padding                  = 0;
+    element_07.marginTop                = 1.0f;
+    element_07.marginBottom             = 1.0f;
     element_07.placeholderText          = @"Description";
     element_07.placeholderColor         = [UIColor lightGrayColor];
     element_07.textFont                 = [UIFont fontWithName:@"Arial" size:14.0];
@@ -176,6 +194,8 @@
     element_08.width                    = self.formFrame.size.width - ALDynamicForm_ElementDefaultPadding;
     element_08.height                   = 50.0f;
     element_08.padding                  = 0;
+    element_08.marginTop                = 10.0f;
+    element_08.marginBottom             = 10.0f;
     element_08.labelTextValue           = @"Send";
     element_08.labelTextColor           = [UIColor whiteColor];
     element_08.labelTextFont            = [UIFont fontWithName:@"Arial" size:18.0f];
