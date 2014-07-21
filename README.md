@@ -36,6 +36,12 @@ Create something objects, add in array and generate your dynamic custom form.
     self.formFrame = CGRectMake(10, 30, [[UIScreen mainScreen] bounds].size.width - ALDynamicForm_ElementDefaultPadding,     [[UIScreen mainScreen] bounds].size.height - 40 /*status bar and label height*/);
     self.form = [[ALDynamicForm alloc] initWithFrame:self.formFrame andElements:[self createFormElements] onView:self.view];
 
+    ----------------------------------------------------------------------------------------
+    UIViewController.m - viewWillDisappear() or viewDidDisappear()
+    ----------------------------------------------------------------------------------------
+    
+    // to reset the formView
+    [self.form removeFromSuperView];
 
 #Creating elements:
 
@@ -107,7 +113,7 @@ Create something objects, add in array and generate your dynamic custom form.
     [formElements addObject:element_04];
     return formElements;
     
-#Get form values
+#Get form values:
     
     ----------------------------------------------------------------------------------------
     UIViewController.m - doSomethignWhenFormSubmit()
