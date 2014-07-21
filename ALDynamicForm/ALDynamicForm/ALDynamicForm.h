@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define ALDynamicForm_ElementDefaultMarginTop 1.0f
+#define ALDynamicForm_ElementDefaultMarginTop 0.0f
+#define ALDynamicForm_ElementDefaultMarginBottom 0.0f
 #define ALDynamicForm_ElementDefaultWidth 300.0f
 #define ALDynamicForm_ElementDefaultHeight 50.0f
 #define ALDynamicForm_ElementDefaultPadding 10.0f
@@ -31,6 +32,8 @@
 @property (nonatomic, assign) float width;
 @property (nonatomic, assign) float height;
 @property (nonatomic, assign) float padding;
+@property (nonatomic, assign) float marginTop;
+@property (nonatomic, assign) float marginBottom;
 
 @property (nonatomic, strong) UIImage* backgroundImage;
 @property (nonatomic, strong) UIColor* backgroundColor;
