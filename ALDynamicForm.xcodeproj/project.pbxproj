@@ -58,42 +58,42 @@
 		164EE074197C46900067261F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		164EE076197C46900067261F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		164EE078197C46900067261F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		164EE07C197C46900067261F /* ALDynamicForm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ALDynamicForm-Info.plist"; path = "../ALDynamicForm-Info.plist"; sourceTree = "<group>"; };
+		164EE07C197C46900067261F /* ALDynamicForm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ALDynamicForm-Info.plist"; path = "ALDynamicForm/ALDynamicForm-Info.plist"; sourceTree = SOURCE_ROOT; };
 		164EE07E197C46900067261F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		164EE080197C46900067261F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
-		164EE082197C46900067261F /* ALDynamicForm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ALDynamicForm-Prefix.pch"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/ALDynamicForm-Prefix.pch"; sourceTree = "<absolute>"; };
-		164EE083197C46900067261F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Delegate/AppDelegate.h; sourceTree = "<absolute>"; };
-		164EE084197C46900067261F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Delegate/AppDelegate.m; sourceTree = "<absolute>"; };
+		164EE080197C46900067261F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ALDynamicForm/main.m; sourceTree = SOURCE_ROOT; };
+		164EE082197C46900067261F /* ALDynamicForm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ALDynamicForm-Prefix.pch"; path = "ALDynamicForm/ALDynamicForm-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		164EE083197C46900067261F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ALDynamicForm/Delegate/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		164EE084197C46900067261F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ALDynamicForm/Delegate/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		164EE087197C46900067261F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		164EE08A197C46900067261F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		164EE08C197C46900067261F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Controllers/ViewController.h; sourceTree = "<absolute>"; };
-		164EE08D197C46900067261F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Controllers/ViewController.m; sourceTree = "<absolute>"; };
-		164EE08F197C46900067261F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/Images.xcassets; sourceTree = "<absolute>"; };
+		164EE08C197C46900067261F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ALDynamicForm/Controllers/ViewController.h; sourceTree = SOURCE_ROOT; };
+		164EE08D197C46900067261F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ALDynamicForm/Controllers/ViewController.m; sourceTree = SOURCE_ROOT; };
+		164EE08F197C46900067261F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ALDynamicForm/Assets/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		164EE095197C46900067261F /* ALDynamicFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALDynamicFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EE096197C46900067261F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		164EE09E197C46900067261F /* ALDynamicFormTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALDynamicFormTests-Info.plist"; sourceTree = "<group>"; };
 		164EE0A0197C46900067261F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		164EE0A2197C46900067261F /* ALDynamicFormTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDynamicFormTests.m; sourceTree = "<group>"; };
-		164EE0B2197C48A80067261F /* ALDynamicForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDynamicForm.h; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/ALDynamicForm/ALDynamicForm.h; sourceTree = "<absolute>"; };
-		164EE0B3197C48A80067261F /* ALDynamicForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDynamicForm.m; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/ALDynamicForm/ALDynamicForm.m; sourceTree = "<absolute>"; };
-		164EE0B6197C4D970067261F /* bg_combobox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_combobox.png; sourceTree = "<group>"; };
-		164EE0B7197C4D970067261F /* bg_submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_submit.png; sourceTree = "<group>"; };
-		164EE0BA197C4DF40067261F /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-60.png"; sourceTree = "<absolute>"; };
-		164EE0BB197C4DF40067261F /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-60@2x.png"; sourceTree = "<absolute>"; };
-		164EE0BC197C4DF40067261F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-72.png"; sourceTree = "<absolute>"; };
-		164EE0BD197C4DF40067261F /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-72@2x.png"; sourceTree = "<absolute>"; };
-		164EE0BE197C4DF40067261F /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-76.png"; sourceTree = "<absolute>"; };
-		164EE0BF197C4DF40067261F /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-76@2x.png"; sourceTree = "<absolute>"; };
-		164EE0C0197C4DF40067261F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-Small-50.png"; sourceTree = "<absolute>"; };
-		164EE0C1197C4DF40067261F /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-Small-50@2x.png"; sourceTree = "<absolute>"; };
-		164EE0C2197C4DF40067261F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-Small.png"; sourceTree = "<absolute>"; };
-		164EE0C3197C4DF40067261F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-Small@2x.png"; sourceTree = "<absolute>"; };
-		164EE0C4197C4DF40067261F /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-Spotlight-40.png"; sourceTree = "<absolute>"; };
-		164EE0C5197C4DF40067261F /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon-Spotlight-40@2x.png"; sourceTree = "<absolute>"; };
-		164EE0C6197C4DF40067261F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon.png; sourceTree = "<absolute>"; };
-		164EE0C7197C4DF40067261F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/Icon@2x.png"; sourceTree = "<absolute>"; };
-		164EE0C8197C4DF40067261F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = /Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/iTunesArtwork; sourceTree = "<absolute>"; };
-		164EE0C9197C4DF40067261F /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "/Users/albertolourenco/Desktop/ALDynamicForm/ALDynamicForm/Assets/AppIcon/iTunesArtwork@2x"; sourceTree = "<absolute>"; };
+		164EE0B2197C48A80067261F /* ALDynamicForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDynamicForm.h; path = ALDynamicForm/ALDynamicForm/ALDynamicForm.h; sourceTree = SOURCE_ROOT; };
+		164EE0B3197C48A80067261F /* ALDynamicForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDynamicForm.m; path = ALDynamicForm/ALDynamicForm/ALDynamicForm.m; sourceTree = SOURCE_ROOT; };
+		164EE0B6197C4D970067261F /* bg_combobox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_combobox.png; path = ALDynamicForm/ALDynamicForm/bg_combobox.png; sourceTree = SOURCE_ROOT; };
+		164EE0B7197C4D970067261F /* bg_submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_submit.png; path = ALDynamicForm/ALDynamicForm/bg_submit.png; sourceTree = SOURCE_ROOT; };
+		164EE0BA197C4DF40067261F /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-60.png"; sourceTree = SOURCE_ROOT; };
+		164EE0BB197C4DF40067261F /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0BC197C4DF40067261F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		164EE0BD197C4DF40067261F /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0BE197C4DF40067261F /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-76.png"; sourceTree = SOURCE_ROOT; };
+		164EE0BF197C4DF40067261F /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-76@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C0197C4DF40067261F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C1197C4DF40067261F /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-Small-50@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C2197C4DF40067261F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C3197C4DF40067261F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C4197C4DF40067261F /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-Spotlight-40.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C5197C4DF40067261F /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon-Spotlight-40@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C6197C4DF40067261F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ALDynamicForm/Assets/AppIcon/Icon.png; sourceTree = SOURCE_ROOT; };
+		164EE0C7197C4DF40067261F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "ALDynamicForm/Assets/AppIcon/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		164EE0C8197C4DF40067261F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ALDynamicForm/Assets/AppIcon/iTunesArtwork; sourceTree = SOURCE_ROOT; };
+		164EE0C9197C4DF40067261F /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "ALDynamicForm/Assets/AppIcon/iTunesArtwork@2x"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,8 +426,8 @@
 				164EE07E197C46900067261F /* en */,
 			);
 			name = InfoPlist.strings;
-			path = ..;
-			sourceTree = "<group>";
+			path = ALDynamicForm;
+			sourceTree = SOURCE_ROOT;
 		};
 		164EE086197C46900067261F /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -435,7 +435,8 @@
 				164EE087197C46900067261F /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
+			path = ALDynamicForm/Views;
+			sourceTree = SOURCE_ROOT;
 		};
 		164EE089197C46900067261F /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -443,7 +444,8 @@
 				164EE08A197C46900067261F /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
+			path = ALDynamicForm/Views;
+			sourceTree = SOURCE_ROOT;
 		};
 		164EE09F197C46900067261F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -615,6 +617,7 @@
 				164EE0A8197C46900067261F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		164EE0A9197C46900067261F /* Build configuration list for PBXNativeTarget "ALDynamicFormTests" */ = {
 			isa = XCConfigurationList;
@@ -623,6 +626,7 @@
 				164EE0AB197C46900067261F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
