@@ -50,6 +50,7 @@
 
 - (UIView*)generateForm:(NSMutableArray*)elements;
 - (id)initWithFrame:(CGRect)frame andElements:(NSMutableArray*)elementsArray onView:(UIView*)view;
+- (void)removeFromSuperView;
 
 @end
 
