@@ -40,6 +40,10 @@
     self.form = [[ALDynamicForm alloc] initWithFrame:self.formFrame andElements:[self createFormElements] onView:self.view];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.form removeFromSuperView];
+}
+
 //------------------------------------------------------------------------------------------------------
 //  ALDynamicForm
 //------------------------------------------------------------------------------------------------------
