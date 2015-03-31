@@ -1,7 +1,7 @@
   ALDynamicForm - iOS
 ---------------
 
-![ALDynamicForm v1.0](http://albertolourenco.com.br/github.png)
+![ALDynamicForm v1.0](http://albertolourenco.com.br/aldynamicform-ios.png)
 
 A powerful dynamic form for Objective-C (iOS).
 With this lib you can create a dynamic custom forms. See the references:
