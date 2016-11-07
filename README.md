@@ -1,4 +1,4 @@
-  ALDynamicForm - iOS
+  ALDynamicForm - iOS (Deprecated)
 ---------------
 
 ![ALDynamicForm v1.0](http://albertolourenco.com.br/aldynamicform-ios.png)
