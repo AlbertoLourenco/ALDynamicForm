@@ -1,7 +1,5 @@
 ![cover](https://raw.githubusercontent.com/AlbertoLourenco/ALDynamicForm/master/github-assets/cover.png)
 
-`(Deprecated)`
-
 A powerful dynamic form for iOS developed with Objective-C.
 With this library you can create a dynamic custom forms. See the references:
 
